@@ -1,9 +1,9 @@
 #!ipxe
 #This is an auto-generated script - Any changes here might be lost
 
-set boot-url {{ ipxe.boot_url }}
-set boot-dir {{ ipxe.boot_dir }}
-set menu-url ${boot-url}${boot-dir}/{{ ipxe.menu_file }}
+set boot-url {{ ipxe.lookup.boot_url }}
+set boot-dir {{ ipxe.lookup.boot_dir }}
+set menu-url ${boot-url}${boot-dir}/{{ ipxe.lookup.menu_file }}
 
 # Boot <boot-url>/<boot-dir>/hostname-<hostname>.ipxe
 # if hostname DHCP variable is set and script is present

@@ -4,9 +4,9 @@
 
 bootstrap:
   file.managed:
-    - name: {{ ipxe.bootstrap_file }}
-    - source: {{ ipxe.bootstrap_source }}
-    - source_hash: {{ ipxe.bootstrap_source_hash }}
+    - name: {{ ipxe.lookup.bootstrap_file }}
+    - source: {{ ipxe.lookup.bootstrap_source }}
+    - source_hash: {{ ipxe.lookup.bootstrap_source_hash }}
     - makedirs: True
 
 

@@ -6,7 +6,7 @@
 {%- for file, values in config['files'].iteritems() %}
 {{ script }}-{{file}}:
   file.managed:
-    - name: {{ ipxe.base_dir }}{{ ipxe.boot_dir }}/{{script}}/{{file}}
+    - name: {{ ipxe.lookup.base_dir }}{{ ipxe.lookup.boot_dir }}/{{script}}/{{file}}
     - makedirs: True
 {%- for k,v in values.iteritems() %}
     - {{k}}: {{v}}

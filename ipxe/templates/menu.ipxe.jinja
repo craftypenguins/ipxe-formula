@@ -11,7 +11,6 @@ item {{script}} {{ data.get('title') }}
 #Chain load submenu {{script}}
 chain --replace --autofree ${boot-url}/${boot-dir}/{{script}}/{{script}}.ipxe
 {%- endmacro %}
-
 :start
 menu iPXE Main Menu
 item --gap --                      ----------------Menu Items----------------
@@ -24,7 +23,7 @@ item shell                         Drop to iPXE shell
 item reboot                        Reboot
 item --gap
 item --key x exit                  Exit iPXE and continue to BIOS boot
-choose --timeout 5000 --default x selected || goto cancel
+choose --timeout {{ ipxe.menu_file_timeout }} --default x selected || goto cancel
 goto ${selected}
 {% for script in scripts %}
 {{- render_submenu_chainload(script) }}

@@ -1,7 +1,8 @@
-ipxe:
-  lookup:
+#!yamlex
+ipxe: !aggregate
+  lookup: !aggregate
     boot_url: http://192.168.33.102
-  scripts:
+  scripts: !aggregate
     debian:
       title: Debian Preseed Installers
       hidden: False
@@ -34,7 +35,7 @@ ipxe:
                   default: True
                   selected: True
               choose:
-                timeout: 30
+                timeout: 60000
                 default: x
         - debian_install_cloud:
             commands:
@@ -88,7 +89,7 @@ ipxe:
                 - name: exit
                   label: Exit and return to main menu
               choose:
-                timeout: 30
+                timeout: 60000
                 default: x
         - ubuntu_install_cloud:
             commands:

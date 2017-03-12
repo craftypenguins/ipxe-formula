@@ -10,7 +10,7 @@
 {%- macro render_menu(menu) %}
 menu {{ menu.get('name','a_menu') }}
 {%- for item in menu['items'] %}
-item{{ ' --gap --' if item.get('gap') else '' }}{{ ' --key '+ item.get('key','')|string if item.get('key') else '' }} {{ item.get('name') }} {{ item.get('label','') }}
+item{{ ' --gap --' if item.get('gap') else '' }}{{ ' --key ' ~ item.get('key','') if item.get('key') else '' }} {{ item.get('name') if item.get('name') else ''}} {{ item.get('label','') }}
 {%- endfor %}
 {%- if menu.get('choose', False) %}
 {%- set choose = menu.get('choose') %}

@@ -5,8 +5,16 @@ Formula to deploy ipxe bootstrap and menus
 
 Work In Progress
 ================
-This a work in progress.  A blog post related to it's development
-is in progress.  It does currently work with the example pillar
+This a work in progress.  A blog post related to its development
+is in progress.  
+
+This does now work using the example pillar.   Note that I don't use the 
+pillar as is, I have it broken in to various pillar files, and they are merged 
+togther using the Saltstack Yamlex processor that supports aggregation of yaml.
+
+The pillar example is as of March 12th, 2017.  The external URLS and SHA256 hashes
+migth not be valid when you go to use it.
+
 .. note::
 
     See the full `Salt Formulas installation and usage instructions

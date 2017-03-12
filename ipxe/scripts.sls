@@ -21,6 +21,7 @@
     - template: jinja
     - context:
         scripts: {{scripts}}
+        ipxe: {{ipxe.lookup}}
 
 #Generate sub menu scripts
 {%- for script, config in scripts.iteritems() %}

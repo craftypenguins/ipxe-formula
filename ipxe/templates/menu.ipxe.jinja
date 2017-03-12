@@ -9,7 +9,7 @@ item {{script}} {{ data.get('title') }}
 {%- macro render_submenu_chainload(script) %}
 :{{script}}
 #Chain load submenu {{script}}
-chain --replace --autofree ${boot-url}${boot_dir}{{script}}/{{script}}.ipxe
+chain --replace --autofree ${boot-url}/${boot-dir}/{{script}}/{{script}}.ipxe
 {%- endmacro %}
 
 :start

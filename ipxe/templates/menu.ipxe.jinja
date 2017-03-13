@@ -13,6 +13,9 @@ chain --replace --autofree ${boot-url}/${boot-dir}/{{script}}/{{script}}.ipxe
 {%- endmacro %}
 :start
 menu iPXE Main Menu
+item --gap -- DHCP Hostname ${hostname}
+item --gap -- DHCP Domain ${domain}
+item --gap
 item --gap --                      ----------------Menu Items----------------
 {%- for script, data in scripts.iteritems() %}
 {{- render_submenu(script, data) }}

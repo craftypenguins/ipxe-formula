@@ -11,6 +11,6 @@ ipxe:
     menu_file_timeout: 0
     bootstrap_file: '/srv/tftp/undionly.kpxe'
     bootstrap_source: 'http://boot.ipxe.org/undionly.kpxe'
-    bootstrap_source_hash: 'c77b3f107326a449e47628bfda31a9ef482a33f2791f5299569f35127c29e5b1'
+    bootstrap_source_hash: '189a805ac89ddca07fef065810590b40ffb5e238f8dba561ec3ed842dcc47695'
   scripts: {}
 

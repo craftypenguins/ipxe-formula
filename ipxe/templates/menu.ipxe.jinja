@@ -17,7 +17,7 @@ item --gap -- DHCP Hostname ${hostname}
 item --gap -- DHCP Domain ${domain}
 item --gap
 item --gap --                      ----------------Menu Items----------------
-{%- for script, data in scripts.iteritems() %}
+{%- for script, data in scripts.items() %}
 {{- render_submenu(script, data) }}
 {%- endfor %}
 item --gap --                      -------------Advanced Options-------------

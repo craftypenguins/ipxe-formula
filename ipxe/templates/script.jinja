@@ -22,7 +22,7 @@ goto ${selected}
 {%- set exit_section = config.auto_exit_section|default(True) %}
 {%- set failed_section = config.auto_failed_section|default(True) %}
 {%- for section in config.sections %}
-{%- for section_name, section_data in section.iteritems() %}
+{%- for section_name, section_data in section.items() %}
 :{{ section_name }}
 {%- if section_data.menu is defined %}
 {{- render_menu(section_data.menu) }}

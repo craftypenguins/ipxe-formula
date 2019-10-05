@@ -24,7 +24,7 @@
         ipxe: {{ipxe.lookup}}
 
 #Generate sub menu scripts
-{%- for script, config in scripts.iteritems() %}
+{%- for script, config in scripts.items() %}
 {{ script }}-ipxe-script:
   file.managed:
     - name: {{ ipxe.lookup.base_dir }}{{ ipxe.lookup.boot_dir }}/{{script}}/{{script}}.ipxe
